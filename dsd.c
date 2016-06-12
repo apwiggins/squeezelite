@@ -354,7 +354,7 @@ static decode_state _decode_dsf(void) {
 	}
 	
 	// skip the other channel blocks
-	// the right channel has already been read and is guarenteed to be in streambuf so can be skipped immediately
+	// the right channel has already been read and is guaranteed to be in streambuf so can be skipped immediately
 	if (d->channels > 1) {
 		_buf_inc_readp(streambuf, d->block_size);
 	}

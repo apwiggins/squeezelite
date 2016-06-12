@@ -183,7 +183,7 @@ static void license(void) {
 static void sighandler(int signum) {
 	slimproto_stop();
 
-	// remove ourselves in case above does not work, second SIGINT will cause non gracefull shutdown
+	// remove ourselves in case above does not work, second SIGINT will cause non graceful shutdown
 	signal(signum, SIG_DFL);
 }
 

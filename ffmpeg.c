@@ -518,7 +518,7 @@ static void _free_ff_data(void) {
 	}
 
 	if (ff->frame) {
-		// ffmpeg version dependant free function
+		// ffmpeg version dependent free function
 #if !LINKALL
 		ff->avcodec_free_frame ? AVCODEC(ff, free_frame, &ff->frame) : AV(ff, freep, &ff->frame);
 #elif LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(54,28,0)
